@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import Profile from "./profiles/Profile";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Profile
+        size={100}
+        person={{
+          name: "duy",
+        }}
+      />
+      <Profile
+        person={{
+          name: "duynd",
+        }}
+      />
+      <Profile
+        size={50}
+        person={{
+          name: "nguyen duy",
+        }}
+      />
+    </>
   );
 }
 
